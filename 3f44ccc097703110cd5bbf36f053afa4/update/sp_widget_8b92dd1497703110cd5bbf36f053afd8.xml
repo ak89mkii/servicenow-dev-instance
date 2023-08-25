@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+	
+/* widget controller */
+
+var numberInputSection = document.getElementById("numberInput");
+var formattedNumberValue = document.getElementById("formattedNumber");
+var testerButton = document.getElementById("testButton");
+var testerText = document.getElementById("testText");
+
+	
+numberInputSection.addEventListener("input",  function(e) {
+    numberFormat(e);
+});
+	
+testerButton.addEventListener("click",  function() {
+    testFunction();
+});
+
+	
+function numberFormat(e) {
+	var numberInput = e.target.value;
+	var countArr = 0;
+	var numInputArr = numberInput.split("");
+	for (var i = 0; i < 11; i++) {
+		if (i === 0) {
+		} else if (i === 3) {
+			numInputArr.splice(i,0,") ");
+		} else if (i === 7) {
+			numInputArr.splice(i,0,"-");
+		} else if (i > 11) {
+			var finalNumInputArr = numInputArr;
+		}
+		var gondor = numInputArr.toString().split(",").join('').slice(0, 13);
+		formattedNumberValue.textContent = "1 (" + gondor;
+	}
+}
+	
+function testFunction(gondor) {
+	testerText.innerHTML = "Tatooine";
+}
+	
+/* end */
+	
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>#testButton {
+  color: white;
+  background-color: #0047ab;
+  width: 200px;
+  height: 40px;
+  border-style: solid;
+  border-color: #0047ab;
+  border-radius: 10px;
+  font-size: 20px;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>phone_number_formatter</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>phone number formatter</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-17 15:43:03</sys_created_on>
+        <sys_id>8b92dd1497703110cd5bbf36f053afd8</sys_id>
+        <sys_mod_count>99</sys_mod_count>
+        <sys_name>phone number formatter</sys_name>
+        <sys_package display_value="format-phone-number" source="x_1111791_format_0">3f44ccc097703110cd5bbf36f053afa4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="format-phone-number">3f44ccc097703110cd5bbf36f053afa4</sys_scope>
+        <sys_update_name>sp_widget_8b92dd1497703110cd5bbf36f053afd8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-18 15:05:06</sys_updated_on>
+        <template><![CDATA[<div>
+  
+<!-- your widget template -->
+  
+<form>
+  <input id="numberInput">
+</form>
+<br>
+<p id="formattedNumber"></p>
+<br>
+<p id="testText"></p>
+<p><button id="testButton">Test Button</button></p>
+  
+<!-- end -->
+  
+</div>]]></template>
+    </sp_widget>
+</record_update>
