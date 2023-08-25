@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>500</order>
+        <published_ref/>
+        <question display_value="Choose a Droid:">33cf888c97703110cd5bbf36f053af45</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-16 16:15:53</sys_created_on>
+        <sys_id>268054cc97703110cd5bbf36f053af39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Data</sys_name>
+        <sys_package display_value="format-phone-number" source="x_1111791_format_0">3f44ccc097703110cd5bbf36f053afa4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="format-phone-number">3f44ccc097703110cd5bbf36f053afa4</sys_scope>
+        <sys_update_name>question_choice_268054cc97703110cd5bbf36f053af39</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-16 16:15:53</sys_updated_on>
+        <text>Data</text>
+        <value>data</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=268054cc97703110cd5bbf36f053af39"/>
+</record_update>
